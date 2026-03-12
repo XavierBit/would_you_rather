@@ -18,7 +18,7 @@
 
   You should have received a copy of the GNU General Public License
   along with this program. If not, see <https://www.gnu.org/licenses/>.
-
+  
   Please feel free to contact me at https://github.com/XavierBit/would_you_rather
 -->
 <!DOCTYPE html>
@@ -1005,7 +1005,7 @@ function openEditor(code, keepOpen) {
   panel.className = 'open';
   panel.innerHTML = `
     <div class="editor-header">
-      <div class="editor-title">Editing: <span>${code} &mdash; ${DEFAULT_LEVELS[code].name}</span></div>
+      <div class="editor-title">Editing: <span>${code} &middot; ${DEFAULT_LEVELS[code].name}</span></div>
       <button class="editor-close" onclick="closeEditor()">Close</button>
     </div>
     <div class="editor-list" id="editor-list"></div>
@@ -1232,7 +1232,7 @@ function startLevel(code) {
   currentLevel = code;
   currentIndex = getIndex(code);
   voted = false;
-  document.getElementById('game-level-label').textContent = code + ' \u2014 ' + DEFAULT_LEVELS[code].name;
+  document.getElementById('game-level-label').textContent = code + ' · ' + DEFAULT_LEVELS[code].name;
   showScreen('screen-game');
   loadQuestion(false);
 }
