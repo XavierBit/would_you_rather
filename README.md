@@ -17,7 +17,7 @@ Display it on a shared screen (e.g. via Jitsi screenshare) and let your students
 - Batch import: paste question pairs directly (one per line, separated by `|`)
 - JSON export and import for sharing question sets
 - Progress counter and per-level question tracking
-- All data stored locally in the browser (no server, no login, no internet required after loading)
+- All data stored locally in the browser (no server, no login, no internet required)
 
 ---
 
