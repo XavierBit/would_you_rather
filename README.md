@@ -30,9 +30,9 @@ Display it on a shared screen (e.g. via Jitsi screenshare) and let your students
 2. Open it in any modern browser (Firefox recommended)
 3. Pick a level and hit **Play**
 4. Screenshare with your students and let them call out their choice - A or B - or let them read their preferred option.
-   For more interaction, ask why they chose this and not the other option.
-5. Click the card they chose to reveal the statistics (only useful if you already used this question)
-6. Hit **Next Question** to keep going
+5. For more interaction, ask why they chose this and not the other option.
+6. Click the card they chose to reveal the statistics (only useful if you already used this question)
+7. Hit **Next Question** to keep going
 
 <img src="https://github.com/user-attachments/assets/7778e937-a64d-49e6-bd8f-ed998b5332dd" width="50%">   
 
