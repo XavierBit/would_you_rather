@@ -34,7 +34,7 @@ Display it on a shared screen (e.g. via Jitsi screenshare) and let your students
 5. Click the card they chose to reveal the statistics (only useful if you already used this question)
 6. Hit **Next Question** to keep going
 
-![WYR_Game_screen](https://github.com/user-attachments/assets/7778e937-a64d-49e6-bd8f-ed998b5332dd)
+<img src="https://github.com/user-attachments/assets/7778e937-a64d-49e6-bd8f-ed998b5332dd" width="50%">   
 
 
 ---
