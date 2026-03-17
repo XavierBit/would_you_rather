@@ -34,6 +34,9 @@ Display it on a shared screen (e.g. via Jitsi screenshare) and let your students
 5. Click the card they chose to reveal the statistics (only useful if you already used this question)
 6. Hit **Next Question** to keep going
 
+![WYR_Game_screen](https://github.com/user-attachments/assets/7778e937-a64d-49e6-bd8f-ed998b5332dd)
+
+
 ---
 
 ## Editing Questions
@@ -50,6 +53,9 @@ Click **Edit** on any level card to open the question editor. You can:
 - Export your questions as a `.json` file to back them up or share them
 - Import a `.json` file to restore or load a shared question set
 - Reset a level back to its defaults at any time
+
+![WYR_Teacher_Screen](https://github.com/user-attachments/assets/3dcaa5f5-8f6f-42b6-b259-6d06998c333e)
+
 
 ---
 
