@@ -1,9 +1,8 @@
 # Would You Rather? 🎮
-### A Classroom Activity Generator for English Teachers
 
 <img width="720" height="170" alt="Would-you-rather_colored_Logo" src="https://github.com/user-attachments/assets/d1d4d352-f62e-47a2-8d51-b96465c7d76c" />
 
-
+### A Classroom Activity Generator for English Teachers
 
 A self-contained, single-file web app designed for online and in-person English classes.
 Display it on a shared screen (e.g. via Jitsi screenshare) and let your students vote and discuss!
