@@ -1,6 +1,6 @@
 <!--
   Would You Rather? - Classroom Activity Generator
-  Version: 1.3
+  Version: 1.4
   Author:  Ivo Schmid for EASY Escola de Idiomas
   License: GNU General Public License v3.0 (GPL-3.0)
 
@@ -687,9 +687,9 @@
     transition: width 0.9s cubic-bezier(0.16, 1, 0.3, 1);
   }
   .result-count {
-    font-size: 1.8rem;
-    color: rgba(255,255,255,0.85);
-    font-weight: 600;
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.75);
+    font-weight: 500;
   }
 
   .game-footer {
@@ -1244,12 +1244,6 @@ function loadQuestion(animate) {
   document.getElementById('game-progress').textContent = (currentIndex + 1) + ' / ' + qs.length;
   document.getElementById('text-a').textContent = q.a;
   document.getElementById('text-b').textContent = q.b;
-  // Dynamic font size based on longest of the two texts
-  const maxLen = Math.max(q.a.length, q.b.length);
-  const fontSize = maxLen <= 30 ? 'clamp(2.4rem, 5vw, 3.4rem)'
-                 : maxLen <= 60 ? 'clamp(1.8rem, 3.8vw, 2.6rem)'
-                 :                'clamp(1.4rem, 3vw, 2rem)';
-  document.querySelectorAll('.choice-text').forEach(el => el.style.fontSize = fontSize);
   const cardA = document.getElementById('card-a');
   const cardB = document.getElementById('card-b');
   cardA.className = 'choice-card';
@@ -1267,21 +1261,31 @@ function loadQuestion(animate) {
 }
 
 function vote(side) {
-  if (voted) return;
-  voted = true;
   const votes = getVotes(currentLevel);
   const qKey = 'q' + currentIndex;
   if (!votes[qKey]) votes[qKey] = { a: 0, b: 0 };
+  const cardA = document.getElementById('card-a');
+  const cardB = document.getElementById('card-b');
+
+  // If already voted, undo the previous vote first
+  if (voted) {
+    const prevSide = cardA.classList.contains('chosen') ? 'a' : 'b';
+    if (prevSide === side) return; // clicked same card, do nothing
+    if (votes[qKey][prevSide] > 0) votes[qKey][prevSide]--;
+    // Remove old result overlays so they can be redrawn
+    document.querySelectorAll('.result-wrap').forEach(el => el.remove());
+  }
+
+  voted = true;
   votes[qKey][side]++;
   saveVotes(currentLevel, votes);
   const q = votes[qKey];
   const total = q.a + q.b;
   const pA = total ? Math.round((q.a / total) * 100) : 50;
   const pB = 100 - pA;
-  const cardA = document.getElementById('card-a');
-  const cardB = document.getElementById('card-b');
-  cardA.onclick = null;
-  cardB.onclick = null;
+
+  cardA.classList.remove('chosen', 'faded');
+  cardB.classList.remove('chosen', 'faded');
   if (side === 'a') { cardA.classList.add('chosen'); cardB.classList.add('faded'); }
   else              { cardB.classList.add('chosen'); cardA.classList.add('faded'); }
   document.getElementById('or-pill').style.opacity = '0';
