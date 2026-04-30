@@ -36,6 +36,11 @@ Display it on a shared screen (e.g. via Jitsi screenshare) and let your students
 
 <img src="https://github.com/user-attachments/assets/7778e937-a64d-49e6-bd8f-ed998b5332dd" width="50%">   
 
+## You can play the game online too! 
+
+Go to https://xavierbit.github.io/would_you_rather/would-you-rather.html to play online.  
+All functions are available as changes are stored only in the browser.
+
 
 ---
 
