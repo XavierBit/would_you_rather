@@ -26,7 +26,7 @@ Display it on a shared screen (e.g. via Jitsi screenshare) and let your students
 
 ## How to Use
 
-1. Download `would-you-rather.html`
+1. Download `would-you-rather.html`. You only need the .html file to run the game!
 2. Open it in any modern browser (Firefox recommended)
 3. Pick a level and hit **Play**
 4. Screenshare with your students and let them call out their choice - A or B - or let them read their preferred option.
