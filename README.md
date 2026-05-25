@@ -1,5 +1,5 @@
 # Would You Rather? 🎮
-
+###### Download the .html game file from:  https://github.com/XavierBit/would_you_rather/releases
 <img width="720" height="170" alt="Would-you-rather_colored_Logo" src="https://github.com/user-attachments/assets/d1d4d352-f62e-47a2-8d51-b96465c7d76c" />
 
 ### A Classroom Activity Generator for English Teachers
