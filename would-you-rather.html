@@ -1,6 +1,6 @@
 <!--
   Would You Rather? - Classroom Activity Generator
-  Version: 1.4
+  Version: 1.5
   Author:  Ivo Schmid for EASY Escola de Idiomas
   License: GNU General Public License v3.0 (GPL-3.0)
 
@@ -800,7 +800,7 @@
       <div class="toggle-track"></div>
       <div class="toggle-knob"></div>
     </label>
-    <span style="font-size:0.72rem; color:var(--muted); font-weight:400; letter-spacing:0.04em; margin-left:1.2rem;">@EASY Escola de Idiomas &nbsp;·&nbsp; v1.4</span>
+    <span style="font-size:0.72rem; color:var(--muted); font-weight:400; letter-spacing:0.04em; margin-left:1.2rem;">@EASY Escola de Idiomas &nbsp;·&nbsp; v1.5</span>
   </div>
 </div>
 
@@ -1124,7 +1124,12 @@ function importQuestions(event, code) {
       if (!Array.isArray(qs) || !qs.length) { alert('No valid questions found in file.'); return; }
       const valid = qs.filter(q => q.a && q.b);
       if (!valid.length) { alert('Questions must have an "a" and "b" field.'); return; }
-      renderEditorRows(valid);
+      const list = document.getElementById('editor-list');
+      const startIdx = list.querySelectorAll('.editor-row').length;
+      valid.forEach((q, i) => {
+        list.appendChild(makeEditorRow(q.a, q.b, startIdx + i));
+      });
+      renumberRows();
       const msg = document.getElementById('saved-msg');
       if (msg) {
         msg.textContent = valid.length + ' questions imported!';
